@@ -1,0 +1,4 @@
+SELECT
+  MIN(date) AS tanggal_awal,
+  MAX(date) AS tanggal_akhir
+FROM `finaltask-508502.kimia_farma.kf_analisa`;
