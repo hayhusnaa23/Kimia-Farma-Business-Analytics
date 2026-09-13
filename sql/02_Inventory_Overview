@@ -1,0 +1,6 @@
+SELECT
+  COUNT(*) AS total_rows,
+  COUNT(DISTINCT inventory_ID) AS unique_inventory,
+  COUNT(DISTINCT branch_id) AS unique_branches,
+  COUNT(DISTINCT product_id) AS unique_products
+FROM `finaltask-508502.kimia_farma.kf_inventory`;
