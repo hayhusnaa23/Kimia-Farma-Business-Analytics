@@ -1,0 +1,28 @@
+SELECT
+  tahun,
+  total_transaksi,
+  total_nett_sales,
+  total_nett_profit,
+
+  ROUND(
+    (total_nett_sales - LAG(total_nett_sales) OVER (ORDER BY tahun))
+    / LAG(total_nett_sales) OVER (ORDER BY tahun) * 100,
+    2
+  ) AS yoy_nett_sales,
+
+  ROUND(
+    (total_nett_profit - LAG(total_nett_profit) OVER (ORDER BY tahun))
+    / LAG(total_nett_profit) OVER (ORDER BY tahun) * 100,
+    2
+  ) AS yoy_nett_profit
+
+FROM (
+  SELECT
+    EXTRACT(YEAR FROM date) AS tahun,
+    COUNT(*) AS total_transaksi,
+    SUM(nett_sales) AS total_nett_sales,
+    SUM(nett_profit) AS total_nett_profit
+  FROM `finaltask-508502.kimia_farma.kf_analisa`
+  GROUP BY tahun
+)
+ORDER BY tahun;
