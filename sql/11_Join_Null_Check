@@ -1,0 +1,7 @@
+SELECT
+  COUNTIF(branch_name IS NULL) AS null_branch_name,
+  COUNTIF(kota IS NULL) AS null_kota,
+  COUNTIF(provinsi IS NULL) AS null_provinsi,
+  COUNTIF(rating_cabang IS NULL) AS null_rating_cabang,
+  COUNTIF(product_name IS NULL) AS null_product_name
+FROM `finaltask-508502.kimia_farma.kf_analisa`;
