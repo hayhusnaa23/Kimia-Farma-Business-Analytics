@@ -1,0 +1,4 @@
+SELECT
+    COUNT(*) AS total_rows,
+    COUNT(DISTINCT transaction_id) AS unique_transactions
+FROM `finaltask-508502.kimia_farma.kf_analisa`;
