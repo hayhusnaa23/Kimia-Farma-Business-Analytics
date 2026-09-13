@@ -1,0 +1,7 @@
+SELECT
+  provinsi,
+  COUNT(*) AS total_transaksi
+FROM `finaltask-508502.kimia_farma.kf_analisa`
+GROUP BY provinsi
+ORDER BY total_transaksi DESC
+LIMIT 10;
