@@ -1,0 +1,4 @@
+SELECT
+  COUNT(*) AS total_rows,
+  COUNT(DISTINCT branch_id) AS unique_branches
+FROM `finaltask-508502.kimia_farma.kf_kantor_cabang`;
