@@ -1,0 +1,4 @@
+SELECT
+  COUNT(*) AS total_rows,
+  COUNT(DISTINCT product_id) AS unique_products
+FROM `finaltask-508502.kimia_farma.kf_product`;
