@@ -1,0 +1,6 @@
+SELECT
+  provinsi,
+  SUM(nett_profit) AS total_nett_profit
+FROM `finaltask-508502.kimia_farma.kf_analisa`
+GROUP BY provinsi
+ORDER BY total_nett_profit DESC;
