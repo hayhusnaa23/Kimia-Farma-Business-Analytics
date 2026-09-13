@@ -1,0 +1,7 @@
+SELECT
+  branch_id,
+  COUNT(*) AS jumlah
+FROM `finaltask-508502.kimia_farma.kf_kantor_cabang`
+GROUP BY branch_id
+HAVING COUNT(*) > 1
+ORDER BY jumlah DESC;
