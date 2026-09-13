@@ -1,0 +1,7 @@
+SELECT
+    discount_percentage,
+    COUNT(*) AS jumlah_transaksi
+FROM `finaltask-508502.kimia_farma.kf_final_transaction`
+GROUP BY discount_percentage
+ORDER BY discount_percentage
+LIMIT 20;
