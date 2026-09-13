@@ -54,7 +54,7 @@ Analisis dilakukan menggunakan SQL di Google BigQuery, meliputi:
 
 ## Dashboard
 
-https://datastudio.google.com/reporting/aaefab05-7d54-4fe6-898e-64aada07f8f3
+[View Dashboard](https://datastudio.google.com/reporting/aaefab05-7d54-4fe6-898e-64aada07f8f3)
 
 ## SQL Query
 
