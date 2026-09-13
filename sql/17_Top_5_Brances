@@ -1,0 +1,19 @@
+SELECT
+  branch_id,
+  branch_name,
+  kota,
+  provinsi,
+  AVG(rating_cabang) AS rating_cabang,
+  AVG(rating_transaksi) AS rating_transaksi,
+  COUNT(*) AS total_transaksi,
+  SUM(nett_sales) AS total_nett_sales
+FROM `finaltask-508502.kimia_farma.kf_analisa`
+GROUP BY
+  branch_id,
+  branch_name,
+  kota,
+  provinsi
+ORDER BY
+  rating_cabang DESC,
+  rating_transaksi ASC
+LIMIT 5;
